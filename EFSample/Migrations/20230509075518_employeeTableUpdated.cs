@@ -4,7 +4,7 @@
 
 namespace EFSample.Migrations
 {
-    public partial class CategoryTableAddDateColumnUpdated : Migration
+    public partial class employeeTableUpdated : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
