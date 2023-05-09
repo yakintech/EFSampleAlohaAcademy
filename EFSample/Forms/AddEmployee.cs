@@ -26,11 +26,15 @@ namespace EFSample.Forms
             employee.Surname = txtSurname.Text;
             employee.BirthDate = dateTimeBirthDate.Value;
 
+            City selectedCity = cmbCities.SelectedItem as City;
+            employee.CityId = selectedCity.Id;
+
            bool result = EmployeeServices.Add(employee);
 
             if (result)
             {
                 MessageBox.Show("Islem basarili");
+                LoadData();
             }
             else
             {
@@ -49,6 +53,8 @@ namespace EFSample.Forms
         {
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = EmployeeServices.GetAll();
+
+            cmbCities.DataSource = CityService.GetAll();
         }
     }
 }

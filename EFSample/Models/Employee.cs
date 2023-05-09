@@ -20,7 +20,6 @@ namespace EFSample.Models
 
         public DateTime BirthDate { get; set; }
 
-
         public int CityId { get; set; }
 
         [ForeignKey("CityId")]

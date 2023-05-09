@@ -18,9 +18,6 @@ namespace EFSample.Services
                 db.Employees.Add(employee);
                 db.SaveChanges();
 
-
-         
-
                 return true;
             }
 			catch (Exception)
